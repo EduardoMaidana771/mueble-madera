@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roperos de madera · Luissi</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style id="page-size">@page { size: A4 landscape; margin: 6mm; }</style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <strong>Roperos de madera real</strong>
+      <span>Materiales de Barraca Luissi · precios al 27/09/2026 · sin costo de cortes</span>
+    </div>
+    <nav class="model-nav" id="model-nav" aria-label="Modelos"></nav>
+    <nav class="page-nav" id="page-nav" aria-label="Páginas generales"></nav>
+    <button class="btn primary" id="print-btn" type="button">Imprimir vista</button>
+  </header>
+
+  <main>
+    <section id="model-view" hidden>
+      <div class="model-head" id="model-head"></div>
+      <nav class="tabs" id="tabs" role="tablist" aria-label="Vistas del modelo"></nav>
+      <div id="panel-3d" hidden>
+        <div class="viewer-bar no-print">
+          <button class="btn" type="button" data-preset="front">Frente</button>
+          <button class="btn" type="button" data-preset="persp">Perspectiva</button>
+          <button class="btn" type="button" data-preset="side">Lateral</button>
+          <label><input type="checkbox" id="open-toggle"> Abrir puertas</label>
+          <label><input type="checkbox" id="dims-toggle"> Mostrar medidas</label>
+          <span class="muted small" id="viewer-hint"></span>
+        </div>
+        <div class="viewer" id="viewer"><div class="overlay" id="viewer-overlay"></div></div>
+        <div class="legend">
+          <span><i style="background:#e7c99c"></i>Finger Joint 20 mm</span>
+          <span><i style="background:#ead9bd"></i>Compensado Eucaliptus 3 mm</span>
+          <span><i style="background:#b86b4b"></i>Compensado Cedro Real 4 mm</span>
+          <span><i style="background:#a9aeb3"></i>Metal (tiradores, guías, riel)</span>
+          <span><i style="background:#1c1c1c"></i>Patas</span>
+          <span>Arrastrar: girar · rueda: zoom · clic derecho: desplazar</span>
+        </div>
+      </div>
+      <div id="panel" ></div>
+    </section>
+    <section id="page-view" hidden></section>
+  </main>
+
+  <script src="vendor/three.min.js"></script>
+  <script src="vendor/OrbitControls.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/models.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/plans.js"></script>
+  <script src="js/viewer3d.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

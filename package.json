@@ -1,0 +1,10 @@
+{
+  "name": "mueble-madera",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cinco roperos de madera real presupuestados con materiales de Barraca Luissi",
+  "scripts": {
+    "check": "node tools/check.js",
+    "report": "node tools/report.js --out docs/presupuestos.md"
+  }
+}
